@@ -37,3 +37,13 @@
 ```css
 /* some custom css here */
 ```
+
+## custom background image
+- click on the edit icon, here select `customCss`, there add
+```css
+:root {
+   --background-url: url("https://example.com/path/to/image.png"); 
+   /* default one is */
+   --background-url: url("./assets/wal1.jpg");
+}
+```
