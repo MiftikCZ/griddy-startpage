@@ -1,0 +1,11 @@
+:root {
+    --secondary-background: #282c34;
+    --main-color: #abb2bf;
+    --secondary-color: hsl(355, 74%, 65%);
+    --links-hue-radius: 207;    /* represents H in hsl(H, s, l) while also H beiing in radius H-25 and H+25 */
+    --links-hue-diff: 0;     /* sets how much diffrent the color of each link is */
+    --links-saturation: 82%;  /* represents S in hsl(h, S, l) */
+    --links-light: 66%;       /* represents L in hsl(h, s, L) */
+    --background-overlay: #73b8f1; /* #4ee580 looks great */
+    --shadow-size: 1px;
+}

@@ -1,0 +1,266 @@
+/* @import url("https://mshaugh.github.io/nerdfont-webfonts/build/firacode-nerd-font.css"); */
+/* @import "https://unpkg.com/@fontsource/iosevka@4.5.4/index.css"; */
+@import "https://unpkg.com/@fontsource/iosevka@latest/index.css";
+@import url("./variables.css");
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background-size: cover;
+    background: var(--main-background);
+    background: var(--background-url) no-repeat center center fixed;
+    background-color: var(--background-overlay);
+    background-blend-mode: multiply;
+}
+
+main {
+    max-width: var(--width);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--gap);
+    grid-auto-rows: minmax(var(--min-height), auto);
+
+    grid-template-areas: 
+    "a a c c d s"
+    "a a c c d s"
+    "b b b b d s"
+}
+
+a {
+    cursor: pointer;
+}
+
+
+main .el:nth-child(1) {
+    grid-area: a;
+}
+main .el:nth-child(2) {
+    grid-area: b;
+}
+
+main .el:nth-child(3) {
+    grid-area: c;
+}
+
+main .el:nth-child(4) {
+    grid-area: s;
+}
+
+main .el:nth-child(5) {
+    grid-area: d;
+}
+
+main .el:nth-child(6) {
+    grid-area: e;
+}
+
+
+main .el, .tlacitka .tlacitko {
+    padding: 0.5em;
+    border-radius: 10px;
+    color: var(--main-color);
+    background: var(--secondary-background);
+    border: #0004 2px solid;
+    box-shadow: var(--secondary-background) var(--shadow-size) var(--shadow-size) var(--shadow-size);
+}
+
+.flex_tall {
+    border: none !important;
+    box-shadow: none !important;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: var(--gap);
+    padding: 0 !important;
+    background: #0000 !important;
+}
+
+.flex_tall .tall {
+    height: 100%;
+}
+
+.tlacitka {
+    border: none !important;
+    box-shadow: none !important;
+    display: grid;
+    height: 100%;
+    gap: var(--gap);
+    padding: 0 !important;
+    background: #0000 !important;
+}
+
+.tlacitka .tlacitko {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.tlacitka .tlacitko svg {
+    transition: 200ms;
+    fill: var(--main-color);
+    height: 1.5em !important;
+    width: 1.5em !important;
+}
+
+.tlacitka .tlacitko:hover svg {
+    fill: var(--secondary-color);
+}
+
+.tlacitka .tlacitko:hover::after, .links .link:hover::after, .onclick_link:hover::after {
+    top: 0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    opacity: 0;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    background: var(--secondary-background);
+    color: var(--main-color);
+    position: absolute;
+    content: attr(href);
+    transition: 250ms;
+    box-shadow: var(--main-color) 0px 0px 2px;
+    animation: showme 100ms linear forwards;
+}
+
+.onclick_link:hover::after {
+    box-shadow: var(--secondary-color) 0px 0px 2px !important;
+    color: var(--secondary-color) !important;
+    content: attr(onclick) !important;
+}
+
+
+@keyframes showme {
+    0% {
+        margin-top: 2em;
+    }
+
+    100% {
+
+        opacity: 100%;
+    }
+}
+
+
+.tlacitko {
+    text-decoration: none;
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 1.5em;
+    color: var(--secondary-color);
+}
+
+.tlacitko_main i, .tlacitko_main svg {
+    color: var(--secondary-color);
+}
+
+.search .input {
+    font-size: 1em;
+    justify-content: start;
+    height: 100%;
+    color: var(--main-color);
+    /* background: #ce5a6b; */
+    background: transparent;
+    border: none;
+    width: 100%;
+}
+
+.search .input:focus-within {
+    outline: none;
+}
+
+.links {
+    display: grid;
+    text-align: center;
+    place-items: center;
+    flex-direction: column;
+}
+
+.links .link {
+    text-decoration: none;
+    color: hsl(calc(var(--links-hue-radius) - calc(var(--links-hue-diff) * 3)), var(--links-saturation), var(--links-light));
+}
+
+.links .link:nth-child(2n) {
+    color: hsl(calc(var(--links-hue-radius) - calc(var(--links-hue-diff) * 2)), var(--links-saturation), var(--links-light));
+    /* color:var(--main-color); */
+}
+
+.links .link:nth-child(3n) {
+    color: hsl(calc(var(--links-hue-radius) - var(--links-hue-diff)), var(--links-saturation), var(--links-light));
+}
+
+
+
+.links .link:nth-child(4n) {
+    color: hsl(calc(var(--links-hue-radius) - calc(var(--links-hue-diff) * 2)), var(--links-saturation), var(--links-light));
+}
+
+.themeSelector {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1em;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    background: var(--secondary-background);
+    color: var(--main-color);
+    border: #0004 2px solid;
+    box-shadow: var(--secondary-background) var(--shadow-size) var(--shadow-size) var(--shadow-size);
+}
+
+.themeSelector .selection {
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.5em 0;
+    border-bottom: #0004 2px solid;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+
+.themeSelector .selection:hover {
+    color: var(--secondary-color);
+}
+
+.themeSelector .selected {
+    background: teal;
+    color: var(--secondary-background);
+    border-radius: 1em;
+}
+
+.themeSelector .textarea {
+    margin: 0.5em 0;
+    width: 15rem;
+    height: 5rem;
+}
