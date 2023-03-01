@@ -53,3 +53,10 @@
    --background-url: url("./assets/wal1.jpg");
 }
 ```
+
+# Pictures
+
+![Snímek obrazovky_2023-02-27_18-16-47](https://user-images.githubusercontent.com/89579269/222229712-f73ea77c-2683-4ba8-aa75-9e136eb07844.png)
+![Snímek obrazovky_2023-03-01_19-12-02](https://user-images.githubusercontent.com/89579269/222229979-72b5e943-56d4-42c4-b892-a725a40129ca.png)
+![Snímek obrazovky_2023-03-01_19-22-40](https://user-images.githubusercontent.com/89579269/222230011-fe864bcf-3548-4f71-9ea2-160efcb68b0c.png)
+
