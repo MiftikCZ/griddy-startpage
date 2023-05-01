@@ -1,8 +1,9 @@
-# griddy-startpage
-- Simple customizible startpage in **grid layout** style ⚒️
-- With 6 diffrent themes and 5 options to customize as well as **custom css**
+# Griddy startpage
+- ⚒️ Simple customizible startpage in **grid layout** style.
+- 🖌️ With 6 diffrent themes, 5 options to customize and **custom css**.
+- 💡 Inspired by eww widgets for linux.
 
-![Snímek obrazovky_2023-02-27_17-31-12](https://user-images.githubusercontent.com/89579269/221627883-48f35ff3-396c-484e-add7-3ee7f8916457.png)
+![Screenshot](https://user-images.githubusercontent.com/89579269/221627883-48f35ff3-396c-484e-add7-3ee7f8916457.png)
 
 # How to customize:
 
@@ -14,18 +15,19 @@
 ## customizing font 
 - click on edit icon, then select `customCss`, there add
 ```css
-@import "https://unpkg.com/@fontsource/<YOURFONT>@latest/index.css";
+@import url('https://fonts.googleapis.com/css2?family=<Your+Font>:wght@400;500&display=swap');
+/* Font's each word should start with uppercased letter and use "+" as whitespace alternative */
 
 :root {
-   --font: "<YOURFONT>", monospace;
+   --font: "<YOUR FONT>", monospace; /* use monospace or sans-serif */
 }
 ```
-- example for **Iosevka** font:
+- example for **Fira sans** font:
 ```css
-@import "https://unpkg.com/@fontsource/iosevka@latest/index.css";
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap');
 
 :root {
-   --font: "iosevka", monospace;
+   --font: "fira sans", sans-serif;
 }
 ```
 

@@ -1,5 +1,4 @@
-/* @import "https://unpkg.com/@fontsource/iosevka@4.5.4/index.css"; */
-/* @import "https://unpkg.com/@fontsource/roboto-mono@latest/index.css"; */
+@import url('https://fonts.googleapis.com/css2?family=Iosevka:wght@400;500&display=swap');
 
 :root {
     font-size: 20px; /* USE 3vh FOR RESPONSIVE, 20px DEFAULT */

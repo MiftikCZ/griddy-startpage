@@ -1,6 +1,3 @@
-/* @import url("https://mshaugh.github.io/nerdfont-webfonts/build/firacode-nerd-font.css"); */
-/* @import "https://unpkg.com/@fontsource/iosevka@4.5.4/index.css"; */
-@import "https://unpkg.com/@fontsource/iosevka@latest/index.css";
 @import url("./variables.css");
 
 * {
