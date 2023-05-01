@@ -181,7 +181,7 @@ function loadTime() {
 
 function dayOfTheWeek() {
     let e = new Date().getDay()
-    let dny = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturdayc"]
+    let dny = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     document.getElementById("dayOfTheWeek").innerText = dny[e]
 }
 
