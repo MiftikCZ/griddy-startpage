@@ -8,19 +8,23 @@
     --main-background: hsl(0, 2%, 36%);
     --secondary-background: #121212;
 
-    --background-overlay: #12121230;          /* overlays the background color with this color with multiply filter */
-    --background-url: url("./assets/wal1.jpg"); /* use normal color to set static color */
+    --background-overlay: #12121230;          /* overlays background with this color using multiply filter */
+    --background-url: url("./assets/wal1.jpg"); /* any valid css color */
 
     --gap: 0.5em;
     --min-height:6em;
     --width: 45em;
 
-    --links-hue-radius: 0;    /* represents H in hsl(H, s, l) while also H beiing in radius H-25 and H+25 */
     --links-hue-diff: 25;     /* sets how much diffrent the color of each link is */
+    --links-hue-radius: 0;    /* represents H in hsl(H, s, l) while also H beiing in radius H-25 and H+25 */
     --links-saturation: 37%;  /* represents S in hsl(h, S, l) */
     --links-light: 48%;       /* represents L in hsl(h, s, L) */
 
     --shadow-size: 4px;
 
-    --font: "Iosevka", monospace;
+    --font: "Iosevka", monospace ;
+    /* 
+        monospace  - Each character has same width
+        sans-serif - Each character has relative width
+    */
 }
